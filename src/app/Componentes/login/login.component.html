@@ -1,0 +1,29 @@
+<div id="contenedor1">
+    <img class="img-fondo" src="../../../../assets/img/principal.jpg" alt="">
+    <div>
+        <h1 id="titulo">Sistema de Inventario</h1>
+
+        <div class="contenedor">
+            <h2 id="inicioSesion">Iniciar Sesión</h2>
+            <p>Ingresar datos</p>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <form id="datosLogin" name="datosLogin" #dataUsuario="ngForm"
+                            (submit)="validar(dataUsuario.value)" class="form">
+                            <label for="nombre">Usuario:</label><br>
+                            <input type="text" id="nombre" name="nombre" ngModel class="form-control"><br>
+                            <label for="contrasena">Contraseña</label>
+                            <input type="password" id="contrasena" name="contrasena" ngModel class="form-control"
+                                placeholder="contraseña"><br>
+                            <button class="btn btn-success">Enviar</button>
+                        </form>
+                        <br>
+                        <p id="resultado"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

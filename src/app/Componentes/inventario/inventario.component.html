@@ -1,0 +1,30 @@
+<div id="contenedor">
+    <img class="img-fondo" src="../../../assets/img/invent.jpg" alt="">
+    <header>
+        <app-header></app-header>
+    </header>
+    <main>
+        <nav class="nav nav-tabs">
+            <ul>
+                <div class="invenTotal">
+                    <li class="nav-item"><a class="nav-link" (click)="goInventarioTotal()">Inventario Total</a></li>
+                </div>
+                <div>
+                    <li class="nav-item"><a class="nav-link" (click)="goVentas()">Ventas</a></li>
+                </div>
+                <div>
+                    <li class="nav-item"><a class="nav-link" (click)="goStock()">Productos</a></li>
+                </div>
+
+            </ul>
+        </nav>
+       
+        <div class="tabla">
+            <router-outlet></router-outlet>
+        </div>
+        
+    </main>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

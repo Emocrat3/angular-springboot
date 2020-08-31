@@ -1,0 +1,111 @@
+<div>
+  <form id="datosVenta" name="datosVenta" #dataVenta="ngForm" (submit)="agregarVenta(dataVenta.value)" class="form">
+    <div class="form-row">
+      <div ng-app="appComboBox" ng-controller="ctrlComboBox" class="col-6">
+        <label for="ComboGeneral">Sucursal</label>
+        <select id="ComboGeneral" class="form-control col-sm" kendo-combo-box>
+          <option>Seleccione una opcion...</option>
+          <option>Peñalolen</option>
+          <option>Macul</option>
+          <option>providencia</option>
+          <option>Las Condes</option>
+          <option>Vitacura</option>
+        </select>
+      </div>
+      <div class="col-1">
+        <label for="numeroE">N° Empleado</label>
+        <input type="number" id="numeroE" name="numeroE" ngModel class="form-control" placeholder="ingrese...">
+      </div>
+      <div class="col-5">
+        <label for="nombreE"></label>
+        <input type="text" id="nombreE" name="nombreE" ngModel class="form-control" placeholder="nombre empleado... ">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <label for="rut">Fecha</label>
+        <input type="date" id="fecha" name="fecha" ngModel class="form-control">
+      </div>
+      <div class="col">
+        <label for="numeroDetalle">N° Detalle Compra</label>
+        <input type="number" id="numeroDetalle" name="numeroDetalle" ngModel class="form-control"
+          placeholder="ingrese...">
+      </div>
+      <div class="col">
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" name="cantidad" ngModel class="form-control">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <label for="descuento">Descuento</label>
+        <input type="number" id="descuento" name="descuento" ngModel class="form-control" placeholder="ingrese...">
+      </div>
+      <div class="col">
+        <label for="valor">Valor</label>
+        <input type="number" id="valor" name="valor" ngModel class="form-control">
+      </div>
+      <div ng-app="appComboBox" ng-controller="ctrlComboBox" class="col-4">
+        <label for="ComboGeneral">Marca</label>
+        <select id="ComboGeneral" class="form-control col-sm" kendo-combo-box>
+          <option>Seleccione una opcion...</option>
+          <option>Lg</option>
+          <option>Huawuei</option>
+          <option>Samnsung</option>
+          <option>Motorola</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div ng-app="appComboBox" ng-controller="ctrlComboBox" class="col-4">
+        <label for="ComboGeneral">Categoria</label>
+        <select id="ComboGeneral" class="form-control col-sm" kendo-combo-box>
+          <option>Seleccione una opcion...</option>
+          <option>Smarphone</option>
+          <option>Satelital</option>
+          <option>Aqua</option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" id="descripcion" name="descripcion" ngModel class="form-control" placeholder="ingrese...">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" id="guardar">Guardar Venta</button>
+  </form>
+</div>
+<h1>Ventas Detalle</h1>
+<div id="contenedorTabla">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col-2">sucursal</th>
+        <th scope="col-2">Fecha</th>
+        <th scope="col-2">Numero Documento</th>
+        <th scope="col-2">Cantidad</th>
+        <th scope="col-2">Descuento</th>
+        <th scope="col-2">Valor</th>
+        <th scope="col-2">Marca</th>
+        <th scope="col-2">Categoria</th>
+        <th scope="col-2">Descripcion</th>
+        <th scope="col-2">Borrar</th>
+        <th scope="col-2">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{venta.sucrsal}}</td>
+        <td>{{venta.fecha}}</td>
+        <td>{{venta.numeroDocumento}}</td>
+        <td>{{venta.cantidad}} </td>
+        <td>{{venta.descuento}}</td>
+        <td>{{venta.valor}}</td>
+        <td>{{venta.marca}}</td>
+        <td>{{venta.categoria}}</td>
+        <td>{{venta.descripcion}}</td>
+        <td><button class="btn btn-danger" (click)="borrarVenta(venta)">Borrar</button></td>
+        <td><button class="btn btn-primary" [routerLink]="['/agregarUsuario/editar',usuario.id]">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>

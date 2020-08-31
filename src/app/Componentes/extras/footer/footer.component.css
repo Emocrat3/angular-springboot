@@ -1,0 +1,38 @@
+#contenedor{
+    background-color: rgba(63, 228, 63, 0.6);
+    padding: 20px;
+    display: flex;
+    font-size: 18px;
+} 
+.pagina{
+    margin-left: 15%;
+}
+.inicio{
+    margin-bottom: 10px;
+}
+.agregar{
+    margin-bottom: 10px;
+}
+.inventario{
+    margin-bottom: 10px;
+}
+.reporte{
+    margin-bottom: 10px;
+}
+.redes > div > li > a{
+    margin-left: 10%;
+    color: black;
+}
+.redes{
+    display: flex;
+    margin-left: 10%;
+}
+.face {
+    margin-right: 50px;
+}
+.insta {
+    margin-right: 50px;
+}
+
+
+

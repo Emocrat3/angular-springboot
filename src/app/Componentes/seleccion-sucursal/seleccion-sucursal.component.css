@@ -1,0 +1,12 @@
+#navegacion{
+    margin: 20px;
+    box-shadow: 0px 0px 6px black;
+    border-radius: 5px;
+}
+#navegacion a{
+    display: block;
+    padding: 20px 30px;
+}
+.row{
+    margin-top: 40px;
+}

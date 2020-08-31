@@ -1,0 +1,33 @@
+<div id="contenedor">
+    <img class="img-fondo" src="../../../assets/img/segunda.jpg" alt="">
+    <header>
+        <app-header></app-header>
+    </header>
+    <main>
+        <section id="menuPaginaInicio">
+            <ul>
+                <div id="menuArriba">
+                    <div class="agregar">
+                        <img src="../../../assets/img/agregar.jpeg">
+                        <li><a (click)="goAgregarUsuario()">Agregar Usuario</a></li>
+                    </div>
+                    <div class="inventarios">
+                        <img src="../../../assets/img/inventario.jpeg" alt="">
+                        <li><a (click)="goInventario()">Inventario</a></li>
+                    </div>
+                </div>
+                <div id="menuAbajo">
+                    <div class="reportes">
+                        <img src="../../../assets/img/reporte.jpeg" alt="">
+                        <li><a (click)="goReportes()">Reportes</a></li>
+                    </div>
+                </div>
+
+            </ul>
+
+        </section>
+    </main>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

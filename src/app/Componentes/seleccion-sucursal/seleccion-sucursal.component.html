@@ -1,0 +1,9 @@
+<section class="container">
+    <section class="row justify-content-center" >
+        <div class="col-7">
+            <ul>
+                <li id="navegacion" *ngFor ="let sucursal of sucursalesTotal"><a (click)="procesarSucursal()">{{sucursal.nombre}}</a></li>
+            </ul>
+        </div>
+    </section>
+</section>

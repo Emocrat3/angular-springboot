@@ -1,0 +1,27 @@
+h1{
+    margin-top: 90px;
+    margin-bottom: 35px;
+    margin-left: 30%;
+    color: black;
+}
+.table{
+    margin: 0 auto;
+    border: solid 1px black;
+    padding: 20px;
+    color: black;
+    background-color: rgba(255, 239, 213, 0.836);
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    transform: scale(0.8,0.8);
+}
+
+.col-5{
+    margin-top: 7px;
+}
+#guardar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 45%;
+}

@@ -1,0 +1,82 @@
+<div id="contenedor">
+    <img class="img-fondo" src="../../../assets/img/porfis.jpg" alt="">
+    <header>
+        <app-header></app-header>
+    </header>
+    <main>
+        <h1  class="text-center text-white mt-4 pt-4">Editar Usuario:</h1>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-7">
+                    <form #dataUsuario="ngForm">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre" class="form-control"
+                                    placeholder="Ingrese Nombre">
+                            </div>
+                            <div class="col-5">
+                                <label for="rut">Rut</label>
+                                <input type="number" id="rut" name="rut" [(ngModel)]="usuario.rut" class="form-control"
+                                    placeholder="ejemplo 11.111.111">
+                            </div>
+                            <div class="col-1" id="digito">
+                                <input type="text" id="digitoVerificador" name="digitoVerificador" [(ngModel)]="usuario.digitoVerificador"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-4">
+                                <label for="direccion">Direccion</label>
+                                <input type="text" id="direccion" name="direccion" [(ngModel)]="usuario.direccion" class="form-control"
+                                    placeholder="ingrese direccion">
+                            </div>
+                            <div class="col-2">
+                                <label for="numeroDireccion">Numero</label>
+                                <input type="number" id="numeroDireccion" name="numeroDireccion" [(ngModel)]="usuario.numeroDireccion"
+                                    class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="comuna">Comuna</label>
+                                <input type="text" id="comuna" name="comuna" [(ngModel)]="usuario.comuna" class="form-control"
+                                    placeholder="ingrese comuna">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="telefono">Telefono</label>
+                                <input type="number" id="telefono" name="telefono" [(ngModel)]="usuario.telefono" class="form-control"
+                                    placeholder="ingrese telefono">
+                            </div>
+                            <div class="col">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" [(ngModel)]="usuario.email" class="form-control"
+                                    placeholder="ejemplo@gmail.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="nombreUsuario">Nombre Usuario</label>
+                                <input type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="usuario.nombreUsuario" class="form-control"
+                                    placeholder="ingrese usuario ">
+                            </div>
+                            <div class="col">
+                                <label for="contrasena">Contraseña</label>
+                                <input type="text" id="contrasena" name="contrasena" [(ngModel)]="usuario.contrasena" class="form-control"
+                                    placeholder="contraseña">
+                            </div>
+                        </div>
+
+                        <div id="boton" class="row justify-content-center mt-4">
+                            <button type="submit" class="btn btn-success col-3" (click)="actualizar()">Editar Usuario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

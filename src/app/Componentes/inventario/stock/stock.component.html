@@ -1,0 +1,63 @@
+<div>
+  <form id="datosProducto" name="datosProducto" #dataProducto="ngForm" (submit)="agregarProducto(dataProducto.value)"
+    class="form">
+    <div class="form-row">
+      <div ng-app="appComboBox" ng-controller="ctrlComboBox" class="col-4">
+        <label for="ComboGeneral">Sucursal</label>
+        <select id="ComboGeneral" class="form-control col-sm-10" kendo-combo-box>
+          <option>Seleccione una opcion...</option>
+          <option>Peñalolen</option>
+          <option>Macul</option>
+          <option>providencia</option>
+          <option>Las Condes</option>
+          <option>Vitacura</option>
+        </select>
+      </div>
+      <div class="col-1">
+        <label for="numeroE">N° Empleado</label>
+        <input type="number" id="numeroE" name="numeroE" ngModel class="form-control" placeholder="ingrese...">
+      </div>
+      <div class="col-7">
+        <label for="nombreE"></label>
+        <input type="text" id="nombreE" name="nombreE" ngModel class="form-control" placeholder="nombre empleado...">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <label for="numeroDetalle">N° Detalle Compra</label>
+        <input type="number" id="numeroDetalle" name="numeroDetalle" ngModel class="form-control"
+          placeholder="ingrese...">
+      </div>
+    </div>
+
+    <button class="btn btn-success" id="guardar">Guardar Compra</button>
+  </form>
+</div>
+<h1>Compras Detalle</h1>
+<div id="contenedorTabla">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col-2">#</th>
+        <th scope="col-2">sucursal</th>
+        <th scope="col-2">Marca</th>
+        <th scope="col-2">Modelo</th>
+        <th scope="col-2">Caracteristicas</th>
+        <th scope="col-2">Cantidad</th>
+        <th scope="col-2">Borrar</th>
+        <th scope="col-2">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Quilin</td>
+        <td>Motorola</td>
+        <td>12.25.32</td>
+        <td>rosados, 5"</td>
+        <td>100.000</td>
+        <td><button class="btn btn-danger">Borrar</button></td>
+        <td><button class="btn btn-primary">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,75 @@
+<div id="contenedor">
+    <img class="img-fondo" src="../../../assets/img/repor.jpg" alt="">
+    <header>
+        <app-header></app-header>
+    </header>
+    <main id="contenedor2">
+        <h1>Reporte de ventas</h1>
+        <h2>Busqueda por periodo</h2>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <label for="fechaI">Fecha Inicio</label>
+                    <input type="date" id="fechaI" name="fechaI" class="form-control">
+                </div>
+                <div class="col">
+                    <label for="fechaT">Fecha termino</label>
+                    <input type="date" id="fechaT" name="fechaT" class="form-control">
+                </div>
+            </div>
+            <div>
+                <label for="sucursal">Sucursal</label>
+                <input type="text" id="sucursal" name="sucursal" class="form-control">
+            </div>
+            <div class="botones">
+                <div> 
+                    <button (click)="generarPDF()" class="btn btn-info">Generar reporte</button>
+                </div>
+                <div class="boton2">
+                    <button class="btn btn-success">Filtrar</button>
+                </div>
+            </div>
+            <div id="contenedorTabla">
+                <table class="table table-hover">
+                    <thead class="thead-light">
+                        <th scope="col-1">#</th>
+                        <th scope="col-2">Sucursal</th>
+                        <th scope="col-2">Periodo</th>
+                        <th scope="col-2">Cantidad Empleados</th>
+                        <th scope="col-2">Total Ventas</th>
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Quilin</td>
+                            <td>Marzo-2019</td>
+                            <td>100</td>
+                            <td>2.000.000.000</td>
+                            
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Vespucio</td>
+                            <td>Diciembre-2018</td>
+                            <td>300</td>
+                            <td>5.000.000.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Providencia</td>
+                            <td>Enero-2017</td>
+                            <td>200</td>
+                            <td>1.000.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

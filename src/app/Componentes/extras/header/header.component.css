@@ -1,0 +1,32 @@
+
+nav{
+    display: flex;
+    background-color: rgba(63, 228, 63, 0.6);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    margin-left: 10%;
+}
+#logo > li > a{
+    font-weight:  bold;
+    font-size: 30px;
+    color: black;
+}
+#navegador{
+    margin-right: 5%;
+    display: flex; 
+    font-size: 18px;
+}
+
+#navegador > li > a{
+    display: block;
+    padding:10px;
+    color: black;
+}
+
+#navegador > li > a:hover{
+    background-color: green;
+    color: white;
+}
